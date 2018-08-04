@@ -1,6 +1,6 @@
 import unittest
-from ..ride import Ride
-from ..bird import Bird
+from models.ride import Ride
+from models.bird import Bird
 
 class BirdTest(unittest.TestCase):
     def setUp(self):

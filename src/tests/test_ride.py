@@ -1,5 +1,5 @@
 import unittest
-from ..ride import Ride
+from models.ride import Ride
 
 class RideTest(unittest.TestCase):
     def setUp(self):

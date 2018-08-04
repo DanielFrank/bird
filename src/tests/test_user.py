@@ -1,6 +1,6 @@
 import unittest
-from ..user import User
-from ..ride import Ride
+from models.user import User
+from models.ride import Ride
 
 class UserTest(unittest.TestCase):
     def setUp(self):

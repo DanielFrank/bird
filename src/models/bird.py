@@ -1,4 +1,4 @@
-from .ride import Ride
+from models.ride import Ride
 
 class Bird:
     

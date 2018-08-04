@@ -1,5 +1,5 @@
 import unittest
-from ..user_store import UserStore
+from store.user_store import UserStore
 
 class UserStoreTest(unittest.TestCase):
     def setUp(self):

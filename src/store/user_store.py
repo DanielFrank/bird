@@ -1,6 +1,6 @@
 #Should probably make this a singleton but not worth the effort
 
-from .user import User
+from models.user import User
 
 class UserStore:
     
