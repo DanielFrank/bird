@@ -28,6 +28,7 @@ class Bird:
         ride = self.ride
         ride.end_ride(end_position, end_time)
         self.total_distance += ride.get_distance()
+        self.ride = None
         return ride
     
     def get_total_distance(self):
@@ -37,5 +38,5 @@ class Bird:
         return self.longest_wait
     
     def get_distance_from_drop_position(self):
-        return Ride.calc_distance(self.drop_position, self.current_position)
+        return Ride.calc_distance(self.current_position, self.drop_position)
     
