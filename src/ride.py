@@ -39,7 +39,7 @@ class Ride:
         self.distance = Ride.calc_distance(self.start_position, self.end_position)
     
     def _calc_cost(self):
-        diff = self.end_time - self.start_time
+        diff = self.get_time()
         if (diff < Ride.MINIMUM_TIME):
             return 0
         cost = Ride.INITIAL_COST
@@ -53,3 +53,6 @@ class Ride:
     
     def get_cost(self):
         return self.cost
+    
+    def get_time(self):
+        return self.end_time - self.start_time

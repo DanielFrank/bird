@@ -13,7 +13,7 @@ class RideTest(unittest.TestCase):
         self.assertEqual(self.ride.user_id, self.user_id)
         
     def test_distance(self):
-        """A ride's should equal the Cartesian distance between its start and stop points"""
+        """A ride's distance should equal the Cartesian distance between its start and stop points"""
         self.ride.start_ride(tuple([15, 18]), 20)
         self.ride.end_ride(tuple([19, 21]), 120)
         self.assertEqual(self.ride.get_distance(), 5)
@@ -40,3 +40,9 @@ class RideTest(unittest.TestCase):
         self.ride.start_ride(tuple([15, 18]), start_time)
         self.ride.end_ride(tuple([15, 31]), start_time + 153)
         self.assertEqual(self.ride.get_cost(), 1.45)
+        
+    def test_get_time(self):
+        """A ride's time should equal the difference between end time and start time"""
+        self.ride.start_ride(tuple([15, 18]), 20)
+        self.ride.end_ride(tuple([19, 21]), 120)
+        self.assertEqual(self.ride.get_time(), 100)
