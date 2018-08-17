@@ -1,21 +1,25 @@
 # Bird Coding Challenge
   
-##Bird Engineering: Coding Exercise
+## Bird Engineering: Coding Exercise
 
-###Bird Events:
-The input to your program is a text file containing a list of Bird events from a completed simulation. Bird events are events which happen in our system, e.g. when a ride is started or ended. A drop event is when a Bird is initially put into the simulation. The format of the events is:
-  | timestamp | Integer | The time in seconds since the start of the simulation |
-  | bird_id | String | The id of the associated Bird vehicle, e.g. JK5T |
-  | event_type | String |The type of the event is one of START_RIDE, END_RIDE, DROP |
-  | x | Double | The x coordinate in a cartesian coordinate system of the location of where the event happened in the simulation |
-  | y | Double | The y coordinate in a cartesian coordinate system of the location of where the event happened in the simulation |
-  | user_id | Integer | The id of the associated user or NULL if the event does not have an associated user |
- Each column is separated by a comma (,) and each line represents a single event. The list is ordered by time starting with the first event that happened.
+### Bird Events:
+The input to your program is a text file containing a list of Bird events from a completed simulation. Bird events are events which happen in our system, e.g. when a ride is started or ended. A drop event is when a Bird is initially put into the simulation. The format of the events is
 
-###Goal:
+| Column        | Type           | Description  |
+| ------------- | ------------- | ----- |
+| timestamp     | Integer | The time in seconds since the start of the simulation |
+| bird_id | String | The id of the associated Bird vehicle, e.g. JK5T |
+| event_type | String |The type of the event is one of START_RIDE, END_RIDE, DROP |
+| x | Double | The x coordinate in a cartesian coordinate system of the location of where the event happened in the simulation |
+| y | Double | The y coordinate in a cartesian coordinate system of the location of where the event happened in the simulation |
+| user_id | Integer | The id of the associated user or NULL if the event does not have an associated user |
+
+Each column is separated by a comma (,) and each line represents a single event. The list is ordered by time starting with the first event that happened.
+
+### Goal:
 The goal of the program is to parse a list of such events and print out to the command line (stdout) answers to the following questions. A list of sample events of one completed simulation is sent as a separate file, so you can test your code with them. Assume each question has exactly one valid answer, each bird has been dropped off as its first event and all rides have a start and end event.
 
-###Questions:
+### Questions:
 <ol>
 <li>What is the total number of Bird vehicles dropped off in the simulation?</li>
 <li>Which Bird ends up the farthest away from its drop location? What is the distance?</li>
@@ -29,7 +33,7 @@ For example:
 <li>Which Bird has the longest wait time between two rides? How many seconds is it?</li>
 <li>What is the average speed travelled across all rides?</li>
 
-##Intro
+## Intro
  
 The following is the solution to the Bird Coding Challenge. 
 
@@ -38,7 +42,7 @@ The following is the solution to the Bird Coding Challenge.
 Code was written in Python 3. I took advantage of the built-in modules of unittest, math (for square root), csv and argparse.
 Used git for version control
 
-##Running Instructions
+## Running Instructions
 
 Run <em>python3 src/main.py [path-to-filename]</em>
 
